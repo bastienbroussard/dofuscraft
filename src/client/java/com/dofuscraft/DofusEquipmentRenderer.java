@@ -30,10 +30,10 @@ public class DofusEquipmentRenderer {
         this.model = model;
     }
 
-    public void render(DofusEquipmentItem.Type type, boolean leftArm, EntityModel<? extends LivingEntity> contextModel,
+    public void render(DofusEquipmentType type, boolean leftArm, EntityModel<? extends LivingEntity> contextModel,
                        MatrixStack matrices, VertexConsumerProvider vertexConsumers, int light, LivingEntity entity,
                        float limbAngle, float limbDistance, float tickDelta, float animationProgress, float headYaw, float headPitch) {
-        if (type == DofusEquipmentItem.Type.RING) {
+        if (type == DofusEquipmentType.RING) {
             if (leftArm) {
                 this.model.leftArm.visible = true;
                 this.model.rightArm.visible = false;
@@ -44,7 +44,7 @@ public class DofusEquipmentRenderer {
             }
         }
 
-        if (type == DofusEquipmentItem.Type.AMULET) {
+        if (type == DofusEquipmentType.AMULET) {
             VertexConsumer vertexConsumer = vertexConsumers.getBuffer(this.model.getLayer(this.texture));
             followBodyRotations(entity, this.model);
             matrices.translate(-0.015f, 0f, -0.1f);
@@ -53,7 +53,7 @@ public class DofusEquipmentRenderer {
             this.model.render(matrices, vertexConsumer, light, OverlayTexture.DEFAULT_UV, 1, 1, 1, 1);
         }
 
-        if (type == DofusEquipmentItem.Type.HAT || type == DofusEquipmentItem.Type.BELT || type == DofusEquipmentItem.Type.RING) {
+        if (type == DofusEquipmentType.HAT || type == DofusEquipmentType.BELT || type == DofusEquipmentType.RING) {
             this.model.setAngles(entity, limbAngle, limbDistance, animationProgress, animationProgress, headPitch);
             this.model.animateModel(entity, limbAngle, limbDistance, tickDelta);
             followBodyRotations(entity, this.model);
@@ -61,14 +61,14 @@ public class DofusEquipmentRenderer {
             matrices.scale(1.2f, 1.2f, 1.2f);
             this.model.render(matrices, vertexConsumer, light, OverlayTexture.DEFAULT_UV, 1, 1, 1, 1);
         }
-        else if (type == DofusEquipmentItem.Type.BOOTS) {
+        else if (type == DofusEquipmentType.BOOTS) {
             VertexConsumer vertexConsumer = vertexConsumers.getBuffer(this.model.getLayer(this.texture));
             followBodyRotations(entity, this.model);
             matrices.translate(0f, -0.15f, 0.02f);
             matrices.scale(1.1f, 1.1f, 1.1f);
             this.model.render(matrices, vertexConsumer, light, OverlayTexture.DEFAULT_UV, 1, 1, 1, 1);
         }
-        else if (type == DofusEquipmentItem.Type.CLOAK) {
+        else if (type == DofusEquipmentType.CLOAK) {
             followBodyRotations(entity, this.model);
 
             if (entity instanceof PlayerEntity playerEntity) {
@@ -150,75 +150,5 @@ public class DofusEquipmentRenderer {
                 bipedModel.copyBipedStateTo(model);
             }
         }
-    }
-
-    static void translateToFace(MatrixStack matrices, final BipedEntityModel<LivingEntity> model,
-                                AbstractClientPlayerEntity player, float headYaw, float headPitch) {
-
-        if (player.isInSwimmingPose() || player.isFallFlying()) {
-            matrices.multiply(RotationAxis.POSITIVE_Z.rotationDegrees(model.head.roll));
-            matrices.multiply(RotationAxis.POSITIVE_Y.rotationDegrees(headYaw));
-            matrices.multiply(RotationAxis.POSITIVE_X.rotationDegrees(-45.0F));
-        } else {
-
-            if (player.isInSneakingPose() && !model.riding) {
-                matrices.translate(0.0F, 0.25F, 0.0F);
-            }
-            matrices.multiply(RotationAxis.POSITIVE_Y.rotationDegrees(headYaw));
-            matrices.multiply(RotationAxis.POSITIVE_X.rotationDegrees(headPitch));
-        }
-        matrices.translate(0.0F, -0.25F, -0.3F);
-    }
-
-    static void translateToChest(MatrixStack matrices, final BipedEntityModel<LivingEntity> model,
-                                 AbstractClientPlayerEntity player) {
-
-        if (player.isInSneakingPose() && !model.riding && !player.isSwimming()) {
-            matrices.translate(0.0F, 0.2F, 0.0F);
-            matrices.multiply(RotationAxis.POSITIVE_X.rotation(model.body.pitch));
-        }
-        matrices.multiply(RotationAxis.POSITIVE_Y.rotation(model.body.yaw));
-        matrices.translate(0.0F, 0.4F, -0.16F);
-    }
-
-    static void translateToRightArm(MatrixStack matrices, final BipedEntityModel<LivingEntity> model,
-                                    AbstractClientPlayerEntity player) {
-
-        if (player.isInSneakingPose() && !model.riding && !player.isSwimming()) {
-            matrices.translate(0.0F, 0.2F, 0.0F);
-        }
-        matrices.multiply(RotationAxis.POSITIVE_Y.rotation(model.body.yaw));
-        matrices.translate(-0.3125F, 0.15625F, 0.0F);
-        matrices.multiply(RotationAxis.POSITIVE_Z.rotation(model.rightArm.roll));
-        matrices.multiply(RotationAxis.POSITIVE_Y.rotation(model.rightArm.yaw));
-        matrices.multiply(RotationAxis.POSITIVE_X.rotation(model.rightArm.pitch));
-        matrices.translate(-0.0625F, 0.625F, 0.0F);
-    }
-
-    static void translateToLeftArm(MatrixStack matrices, final BipedEntityModel<LivingEntity> model,
-                                   AbstractClientPlayerEntity player) {
-
-        if (player.isInSneakingPose() && !model.riding && !player.isSwimming()) {
-            matrices.translate(0.0F, 0.2F, 0.0F);
-        }
-        matrices.multiply(RotationAxis.POSITIVE_Y.rotation(model.body.yaw));
-        matrices.translate(0.3125F, 0.15625F, 0.0F);
-        matrices.multiply(RotationAxis.POSITIVE_Z.rotation(model.leftArm.roll));
-        matrices.multiply(RotationAxis.POSITIVE_Y.rotation(model.leftArm.yaw));
-        matrices.multiply(RotationAxis.POSITIVE_X.rotation(model.leftArm.pitch));
-        matrices.translate(0.0625F, 0.625F, 0.0F);
-    }
-
-    static void translateToRightLeg(MatrixStack matrices, final BipedEntityModel<LivingEntity> model,
-                                    AbstractClientPlayerEntity player) {
-
-        if (player.isInSneakingPose() && !model.riding && !player.isSwimming()) {
-            matrices.translate(0.0F, 0.0F, 0.25F);
-        }
-        matrices.translate(-0.125F, 0.75F, 0.0F);
-        matrices.multiply(RotationAxis.POSITIVE_Z.rotation(model.rightLeg.roll));
-        matrices.multiply(RotationAxis.POSITIVE_Y.rotation(model.rightLeg.yaw));
-        matrices.multiply(RotationAxis.POSITIVE_X.rotation(model.rightLeg.pitch));
-        matrices.translate(0.0F, 0.75F, 0.0F);
     }
 }

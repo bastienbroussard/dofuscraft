@@ -27,18 +27,11 @@ public abstract class ScreenHandlerMixin {
                     var stack = resultSlot.getStack();
                     var item = stack.getItem();
                     if (item instanceof DofusEquipmentItem equipmentItem) {
-                        var nbt = stack.getOrCreateSubNbt("effects");
                         var random = new Random();
+                        var nbt = stack.getOrCreateSubNbt("effects");
                         for (var effect : equipmentItem.getEffects()) {
-                            String identifier = effect.getEffect().getName();
                             int value = random.nextInt(effect.getMaxValue() - effect.getMinValue() + 1) + effect.getMinValue();
-
-                            /*stack.addAttributeModifier(
-                                    DofusCraft.WISDOM,
-                                    new EntityAttributeModifier("prout", value, EntityAttributeModifier.Operation.ADDITION),
-                                    null);*/
-
-                            nbt.putInt(identifier, value);
+                            nbt.putInt(effect.getEffect().getName(), value);
                         }
                     }
                 }

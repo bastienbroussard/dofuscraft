@@ -27,9 +27,9 @@ public class DofusEquipmentSlot extends Slot {
         return super.toString();
     }
 
-    private final DofusEquipmentItem.Type slotType;
+    private final DofusEquipmentType slotType;
 
-    public DofusEquipmentSlot(Inventory inventory, PlayerEntity owner, int index, int x, int y, DofusEquipmentItem.Type slotType) {
+    public DofusEquipmentSlot(Inventory inventory, PlayerEntity owner, int index, int x, int y, DofusEquipmentType slotType) {
         super(inventory, index, x, y);
         this.owner = owner;
         this.slotType = slotType;

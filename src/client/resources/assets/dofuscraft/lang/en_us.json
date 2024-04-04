@@ -12,6 +12,13 @@
   "attribute.name.generic.critical": "Critical",
   "attribute.name.generic.summon": "Summon",
 
+  "item.modifiers.hat": "When on Head:",
+  "item.modifiers.cloak": "When on Back:",
+  "item.modifiers.amulet": "When on Neck:",
+  "item.modifiers.ring": "When on Wrist:",
+  "item.modifiers.belt": "When on Waist:",
+  "item.modifiers.boots": "When on Feet:",
+
   "item.dofuscraft.red_piwi_hat": "Red Piwi Hat",
   "item.dofuscraft.blue_piwi_hat": "Blue Piwi Hat",
   "item.dofuscraft.green_piwi_hat": "Green Piwi Hat",

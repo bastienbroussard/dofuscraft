@@ -1,11 +1,9 @@
 package com.dofuscraft.mixin.client;
 
-import com.dofuscraft.DofusEquipmentItem;
 import com.dofuscraft.DofusEquipmentSlot;
+import com.dofuscraft.DofusEquipmentType;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
-import net.minecraft.entity.EquipmentSlot;
-import net.minecraft.entity.mob.MobEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.inventory.RecipeInputInventory;
@@ -43,13 +41,13 @@ public abstract class PlayerScreenHandlerMixin extends AbstractRecipeScreenHandl
 		}
 
 		// create custom slots
-		this.addSlot(new DofusEquipmentSlot(inventory, owner, 36, 8, 8, DofusEquipmentItem.Type.AMULET));
-		this.addSlot(new DofusEquipmentSlot(inventory, owner, 37, 8, 26, DofusEquipmentItem.Type.RING));
-		this.addSlot(new DofusEquipmentSlot(inventory, owner, 38, 8, 44, DofusEquipmentItem.Type.RING));
-		this.addSlot(new DofusEquipmentSlot(inventory, owner, 39, 77, 8, DofusEquipmentItem.Type.HAT));
-		this.addSlot(new DofusEquipmentSlot(inventory, owner, 40, 77, 26, DofusEquipmentItem.Type.CLOAK));
-		this.addSlot(new DofusEquipmentSlot(inventory, owner, 41, 77, 44, DofusEquipmentItem.Type.BELT));
-		this.addSlot(new DofusEquipmentSlot(inventory, owner, 42, 77, 62, DofusEquipmentItem.Type.BOOTS));
+		this.addSlot(new DofusEquipmentSlot(inventory, owner, 36, 8, 8, DofusEquipmentType.AMULET));
+		this.addSlot(new DofusEquipmentSlot(inventory, owner, 37, 8, 26, DofusEquipmentType.RING));
+		this.addSlot(new DofusEquipmentSlot(inventory, owner, 38, 8, 44, DofusEquipmentType.RING));
+		this.addSlot(new DofusEquipmentSlot(inventory, owner, 39, 77, 8, DofusEquipmentType.HAT));
+		this.addSlot(new DofusEquipmentSlot(inventory, owner, 40, 77, 26, DofusEquipmentType.CLOAK));
+		this.addSlot(new DofusEquipmentSlot(inventory, owner, 41, 77, 44, DofusEquipmentType.BELT));
+		this.addSlot(new DofusEquipmentSlot(inventory, owner, 42, 77, 62, DofusEquipmentType.BOOTS));
 	}
 
 	@Inject(at = @At("HEAD"), method = "quickMove", cancellable = true)
