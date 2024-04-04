@@ -3,8 +3,18 @@ package com.dofuscraft;
 import net.minecraft.util.Formatting;
 
 public enum Characteristic {
+    VITALITY("vitality"),
+    STRENGTH("strength"),
+    INTELLIGENCE("intelligence"),
+    CHANCE("chance"),
+    AGILITY("agility"),
     WISDOM("wisdom"),
-    FIRE_DAMAGE("fire_damage");
+    EARTH_DAMAGE("earth_damage"),
+    FIRE_DAMAGE("fire_damage"),
+    WATER_DAMAGE("water_damage"),
+    AIR_DAMAGE("air_damage"),
+    CRITICAL("critical"),
+    SUMMON("summon");
 
     private final String name;
 
@@ -17,14 +27,18 @@ public enum Characteristic {
     }
 
     public String getTranslationKey() {
-        return "characteristic." + this.name;
+        return "attribute.name.generic." + this.name;
     }
 
     public Formatting getColor() {
         Formatting color = null;
-        switch (this.name) {
-            case "wisdom" -> color = Formatting.DARK_PURPLE;
-            case "fire_damage" -> color = Formatting.RED;
+        switch (this) {
+            case VITALITY, CRITICAL, SUMMON -> color = Formatting.WHITE;
+            case STRENGTH, EARTH_DAMAGE -> color = Formatting.YELLOW;
+            case CHANCE, WATER_DAMAGE -> color = Formatting.BLUE;
+            case WISDOM -> color = Formatting.DARK_PURPLE;
+            case INTELLIGENCE, FIRE_DAMAGE -> color = Formatting.RED;
+            case AGILITY, AIR_DAMAGE -> color = Formatting.GREEN;
         }
 
         return color;

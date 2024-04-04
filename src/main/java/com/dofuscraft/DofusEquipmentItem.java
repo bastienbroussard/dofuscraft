@@ -18,22 +18,16 @@ import java.util.List;
 
 public class DofusEquipmentItem extends Item {
     private final Type type;
-    private final SoundEvent equipSound;
+    private final int level;
     private final List<EquipmentEffect> effects;
+    private final SoundEvent equipSound;
 
-    // TODO remove
-    public DofusEquipmentItem(Type type, SoundEvent equipSound) {
+    public DofusEquipmentItem(Type type, int level, List<EquipmentEffect> effects, SoundEvent equipSound) {
         super(new FabricItemSettings().maxCount(1));
         this.type = type;
-        this.equipSound = equipSound;
-        this.effects = new ArrayList<>();
-    }
-
-    public DofusEquipmentItem(Type type, SoundEvent equipSound, List<EquipmentEffect> effects) {
-        super(new FabricItemSettings().maxCount(1));
-        this.type = type;
-        this.equipSound = equipSound;
+        this.level = level;
         this.effects = effects;
+        this.equipSound = equipSound;
     }
 
     @Override

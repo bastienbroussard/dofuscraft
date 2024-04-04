@@ -11,45 +11,214 @@ import java.util.Arrays;
 
 public class DofusItemRegistry {
     // hats
+    public static final DofusEquipmentItem YELLOW_PIWI_HAT = register("yellow_piwi_hat", new DofusEquipmentItem(
+            DofusEquipmentItem.Type.HAT,
+            7,
+            Arrays.asList(
+                    new EquipmentEffect(Characteristic.VITALITY, 16, 20),
+                    new EquipmentEffect(Characteristic.EARTH_DAMAGE, 1, 1)
+            ),
+            SoundEvents.ITEM_ARMOR_EQUIP_LEATHER));
     public static final DofusEquipmentItem RED_PIWI_HAT = register("red_piwi_hat", new DofusEquipmentItem(
             DofusEquipmentItem.Type.HAT,
-            SoundEvents.ITEM_ARMOR_EQUIP_LEATHER,
+            12,
             Arrays.asList(
                     new EquipmentEffect(Characteristic.WISDOM, 7, 10),
                     new EquipmentEffect(Characteristic.FIRE_DAMAGE, 1, 1)
-            )));
-
+            ),
+            SoundEvents.ITEM_ARMOR_EQUIP_LEATHER));
     public static final DofusEquipmentItem BLUE_PIWI_HAT = register("blue_piwi_hat", new DofusEquipmentItem(
             DofusEquipmentItem.Type.HAT,
+            11,
+            Arrays.asList(
+                    new EquipmentEffect(Characteristic.CHANCE, 16, 20),
+                    new EquipmentEffect(Characteristic.CRITICAL, 2, 3)
+            ),
+            SoundEvents.ITEM_ARMOR_EQUIP_LEATHER));
+    public static final DofusEquipmentItem GREEN_PIWI_HAT = register("green_piwi_hat", new DofusEquipmentItem(
+            DofusEquipmentItem.Type.HAT,
+            8,
+            Arrays.asList(
+                    new EquipmentEffect(Characteristic.VITALITY, 16, 20),
+                    new EquipmentEffect(Characteristic.SUMMON, 1, 1)
+            ),
             SoundEvents.ITEM_ARMOR_EQUIP_LEATHER));
 
     // capes
+    public static final DofusEquipmentItem YELLOW_PIWI_CAPE = register("yellow_piwi_cape", new DofusEquipmentItem(
+            DofusEquipmentItem.Type.CLOAK,
+            9,
+            Arrays.asList(
+                    new EquipmentEffect(Characteristic.STRENGTH, 16, 20),
+                    new EquipmentEffect(Characteristic.EARTH_DAMAGE, 1, 1)
+            ),
+            SoundEvents.ITEM_ARMOR_EQUIP_LEATHER));
     public static final DofusEquipmentItem RED_PIWI_CAPE = register("red_piwi_cape", new DofusEquipmentItem(
             DofusEquipmentItem.Type.CLOAK,
+            8,
+            Arrays.asList(
+                    new EquipmentEffect(Characteristic.VITALITY, 16, 20),
+                    new EquipmentEffect(Characteristic.SUMMON, 1, 1)
+            ),
+            SoundEvents.ITEM_ARMOR_EQUIP_LEATHER));
+    public static final DofusEquipmentItem BLUE_PIWI_CAPE = register("blue_piwi_cape", new DofusEquipmentItem(
+            DofusEquipmentItem.Type.CLOAK,
+            7,
+            Arrays.asList(
+                    new EquipmentEffect(Characteristic.VITALITY, 16, 20),
+                    new EquipmentEffect(Characteristic.WATER_DAMAGE, 1, 1)
+            ),
+            SoundEvents.ITEM_ARMOR_EQUIP_LEATHER));
+    public static final DofusEquipmentItem GREEN_PIWI_CAPE = register("green_piwi_cape", new DofusEquipmentItem(
+            DofusEquipmentItem.Type.CLOAK,
+            10,
+            Arrays.asList(
+                    new EquipmentEffect(Characteristic.AGILITY, 16, 20),
+                    new EquipmentEffect(Characteristic.VITALITY, 16, 20)
+            ),
             SoundEvents.ITEM_ARMOR_EQUIP_LEATHER));
 
     // amulets
+    public static final DofusEquipmentItem YELLOW_PIWI_AMULET = register("yellow_piwi_amulet", new DofusEquipmentItem(
+            DofusEquipmentItem.Type.AMULET,
+            12,
+            Arrays.asList(
+                    new EquipmentEffect(Characteristic.WISDOM, 7, 10),
+                    new EquipmentEffect(Characteristic.EARTH_DAMAGE, 1, 1)
+            ),
+            SoundEvents.ITEM_ARMOR_EQUIP_GOLD));
     public static final DofusEquipmentItem RED_PIWI_AMULET = register("red_piwi_amulet", new DofusEquipmentItem(
             DofusEquipmentItem.Type.AMULET,
+            11,
+            Arrays.asList(
+                    new EquipmentEffect(Characteristic.INTELLIGENCE, 16, 20),
+                    new EquipmentEffect(Characteristic.CRITICAL, 2, 3)
+            ),
+            SoundEvents.ITEM_ARMOR_EQUIP_GOLD));
+    public static final DofusEquipmentItem BLUE_PIWI_AMULET = register("blue_piwi_amulet", new DofusEquipmentItem(
+            DofusEquipmentItem.Type.AMULET,
+            10,
+            Arrays.asList(
+                    new EquipmentEffect(Characteristic.CHANCE, 16, 20),
+                    new EquipmentEffect(Characteristic.VITALITY, 16, 20)
+            ),
+            SoundEvents.ITEM_ARMOR_EQUIP_GOLD));
+    public static final DofusEquipmentItem GREEN_PIWI_AMULET = register("green_piwi_amulet", new DofusEquipmentItem(
+            DofusEquipmentItem.Type.AMULET,
+            7,
+            Arrays.asList(
+                    new EquipmentEffect(Characteristic.VITALITY, 16, 20),
+                    new EquipmentEffect(Characteristic.AIR_DAMAGE, 1, 1)
+            ),
             SoundEvents.ITEM_ARMOR_EQUIP_GOLD));
 
     // rings
+    public static final DofusEquipmentItem YELLOW_PIWI_RING = register("yellow_piwi_ring", new DofusEquipmentItem(
+            DofusEquipmentItem.Type.RING,
+            11,
+            Arrays.asList(
+                    new EquipmentEffect(Characteristic.STRENGTH, 16, 20),
+                    new EquipmentEffect(Characteristic.CRITICAL, 2, 3)
+            ),
+            SoundEvents.ITEM_ARMOR_EQUIP_GOLD));
     public static final DofusEquipmentItem RED_PIWI_RING = register("red_piwi_ring", new DofusEquipmentItem(
             DofusEquipmentItem.Type.RING,
+            10,
+            Arrays.asList(
+                    new EquipmentEffect(Characteristic.INTELLIGENCE, 16, 20),
+                    new EquipmentEffect(Characteristic.VITALITY, 16, 20)
+            ),
+            SoundEvents.ITEM_ARMOR_EQUIP_GOLD));
+    public static final DofusEquipmentItem BLUE_PIWI_RING = register("blue_piwi_ring", new DofusEquipmentItem(
+            DofusEquipmentItem.Type.RING,
+            9,
+            Arrays.asList(
+                    new EquipmentEffect(Characteristic.CHANCE, 16, 20),
+                    new EquipmentEffect(Characteristic.WATER_DAMAGE, 1, 1)
+            ),
+            SoundEvents.ITEM_ARMOR_EQUIP_GOLD));
+    public static final DofusEquipmentItem GREEN_PIWI_RING = register("green_piwi_ring", new DofusEquipmentItem(
+            DofusEquipmentItem.Type.RING,
+            12,
+            Arrays.asList(
+                    new EquipmentEffect(Characteristic.WISDOM, 7, 10),
+                    new EquipmentEffect(Characteristic.AIR_DAMAGE, 1, 1)
+            ),
             SoundEvents.ITEM_ARMOR_EQUIP_GOLD));
 
     // belts
+    public static final DofusEquipmentItem YELLOW_PIWI_BELT = register("yellow_piwi_belt", new DofusEquipmentItem(
+            DofusEquipmentItem.Type.BELT,
+            8,
+            Arrays.asList(
+                    new EquipmentEffect(Characteristic.VITALITY, 16, 20),
+                    new EquipmentEffect(Characteristic.SUMMON, 1, 1)
+            ),
+            SoundEvents.ITEM_ARMOR_EQUIP_LEATHER));
     public static final DofusEquipmentItem RED_PIWI_BELT = register("red_piwi_belt", new DofusEquipmentItem(
             DofusEquipmentItem.Type.BELT,
+            7,
+            Arrays.asList(
+                    new EquipmentEffect(Characteristic.VITALITY, 16, 20),
+                    new EquipmentEffect(Characteristic.FIRE_DAMAGE, 1, 1)
+            ),
+            SoundEvents.ITEM_ARMOR_EQUIP_LEATHER));
+    public static final DofusEquipmentItem BLUE_PIWI_BELT = register("blue_piwi_belt", new DofusEquipmentItem(
+            DofusEquipmentItem.Type.BELT,
+            12,
+            Arrays.asList(
+                    new EquipmentEffect(Characteristic.WISDOM, 7, 10),
+                    new EquipmentEffect(Characteristic.WATER_DAMAGE, 1, 1)
+            ),
+            SoundEvents.ITEM_ARMOR_EQUIP_LEATHER));
+    public static final DofusEquipmentItem GREEN_PIWI_BELT = register("green_piwi_belt", new DofusEquipmentItem(
+            DofusEquipmentItem.Type.BELT,
+            9,
+            Arrays.asList(
+                    new EquipmentEffect(Characteristic.AGILITY, 16, 20),
+                    new EquipmentEffect(Characteristic.AIR_DAMAGE, 1, 1)
+            ),
             SoundEvents.ITEM_ARMOR_EQUIP_LEATHER));
 
     // boots
+    public static final DofusEquipmentItem YELLOW_PIWI_SANDALS = register("yellow_piwi_sandals", new DofusEquipmentItem(
+            DofusEquipmentItem.Type.BOOTS,
+            10,
+            Arrays.asList(
+                    new EquipmentEffect(Characteristic.STRENGTH, 16, 20),
+                    new EquipmentEffect(Characteristic.VITALITY, 16, 20)
+            ),
+            SoundEvents.ITEM_ARMOR_EQUIP_LEATHER));
     public static final DofusEquipmentItem RED_PIWI_SANDALS = register("red_piwi_sandals", new DofusEquipmentItem(
             DofusEquipmentItem.Type.BOOTS,
+            9,
+            Arrays.asList(
+                    new EquipmentEffect(Characteristic.INTELLIGENCE, 16, 20),
+                    new EquipmentEffect(Characteristic.FIRE_DAMAGE, 1, 1)
+            ),
+            SoundEvents.ITEM_ARMOR_EQUIP_LEATHER));
+    public static final DofusEquipmentItem BLUE_PIWI_SANDALS = register("blue_piwi_sandals", new DofusEquipmentItem(
+            DofusEquipmentItem.Type.BOOTS,
+            8,
+            Arrays.asList(
+                    new EquipmentEffect(Characteristic.VITALITY, 16, 20),
+                    new EquipmentEffect(Characteristic.SUMMON, 1, 1)
+            ),
+            SoundEvents.ITEM_ARMOR_EQUIP_LEATHER));
+    public static final DofusEquipmentItem GREEN_PIWI_SANDALS = register("green_piwi_sandals", new DofusEquipmentItem(
+            DofusEquipmentItem.Type.BOOTS,
+            11,
+            Arrays.asList(
+                    new EquipmentEffect(Characteristic.AGILITY, 16, 20),
+                    new EquipmentEffect(Characteristic.CRITICAL, 2, 3)
+            ),
             SoundEvents.ITEM_ARMOR_EQUIP_LEATHER));
 
     // drops
+    public static final Item YELLOW_PIWI_FEATHER = register("yellow_piwi_feather", new Item(new FabricItemSettings()));
     public static final Item RED_PIWI_FEATHER = register("red_piwi_feather", new Item(new FabricItemSettings()));
+    public static final Item BLUE_PIWI_FEATHER = register("blue_piwi_feather", new Item(new FabricItemSettings()));
+    public static final Item GREEN_PIWI_FEATHER = register("green_piwi_feather", new Item(new FabricItemSettings()));
 
     private static DofusEquipmentItem register(String name, DofusEquipmentItem item) {
         return Registry.register(

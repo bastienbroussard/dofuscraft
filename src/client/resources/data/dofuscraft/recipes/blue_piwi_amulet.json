@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "blue_piwi_set",
+  "pattern": [
+    "FFF",
+    "F F",
+    " F "
+  ],
+  "key": {
+    "F": {
+      "item": "dofuscraft:blue_piwi_feather"
+    }
+  },
+  "result": {
+    "item": "dofuscraft:blue_piwi_amulet"
+  }
+}

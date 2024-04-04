@@ -3,7 +3,7 @@
   "group": "red_piwi_set",
   "pattern": [
     "   ",
-    "FFF",
+    "F F",
     "F F"
   ],
   "key": {
@@ -12,6 +12,6 @@
     }
   },
   "result": {
-    "item": "dofuscraft:red_piwi_hat"
+    "item": "dofuscraft:red_piwi_sandals"
   }
 }

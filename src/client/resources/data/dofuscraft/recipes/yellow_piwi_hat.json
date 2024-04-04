@@ -1,6 +1,6 @@
 {
   "type": "minecraft:crafting_shaped",
-  "group": "red_piwi_set",
+  "group": "yellow_piwi_set",
   "pattern": [
     "   ",
     "FFF",
@@ -8,10 +8,10 @@
   ],
   "key": {
     "F": {
-      "item": "dofuscraft:red_piwi_feather"
+      "item": "dofuscraft:yellow_piwi_feather"
     }
   },
   "result": {
-    "item": "dofuscraft:red_piwi_hat"
+    "item": "dofuscraft:yellow_piwi_hat"
   }
 }

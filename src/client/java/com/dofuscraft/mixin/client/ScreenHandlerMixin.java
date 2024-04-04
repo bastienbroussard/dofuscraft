@@ -1,28 +1,18 @@
 package com.dofuscraft.mixin.client;
 
-import com.dofuscraft.DofusCraft;
 import com.dofuscraft.DofusEquipmentItem;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
-import net.minecraft.entity.attribute.EntityAttribute;
-import net.minecraft.entity.attribute.EntityAttributeModifier;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.inventory.CraftingResultInventory;
-import net.minecraft.item.ItemStack;
 import net.minecraft.screen.CraftingScreenHandler;
 import net.minecraft.screen.ScreenHandler;
 import net.minecraft.screen.slot.SlotActionType;
-import net.minecraft.util.collection.DefaultedList;
-import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
-import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
-import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 import java.util.Random;
-import java.util.UUID;
 
 @Environment(EnvType.CLIENT)
 @Mixin(ScreenHandler.class)
@@ -43,10 +33,10 @@ public abstract class ScreenHandlerMixin {
                             String identifier = effect.getEffect().getName();
                             int value = random.nextInt(effect.getMaxValue() - effect.getMinValue() + 1) + effect.getMinValue();
 
-                            stack.addAttributeModifier(
+                            /*stack.addAttributeModifier(
                                     DofusCraft.WISDOM,
                                     new EntityAttributeModifier("prout", value, EntityAttributeModifier.Operation.ADDITION),
-                                    null);
+                                    null);*/
 
                             nbt.putInt(identifier, value);
                         }

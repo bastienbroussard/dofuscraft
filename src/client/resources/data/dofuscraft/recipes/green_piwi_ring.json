@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "green_piwi_set",
+  "pattern": [
+    " F ",
+    "F F",
+    " F "
+  ],
+  "key": {
+    "F": {
+      "item": "dofuscraft:green_piwi_feather"
+    }
+  },
+  "result": {
+    "item": "dofuscraft:green_piwi_ring"
+  }
+}

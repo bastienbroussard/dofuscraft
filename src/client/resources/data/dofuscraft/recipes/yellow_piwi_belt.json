@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "yellow_piwi_set",
+  "pattern": [
+    "FFF",
+    "   ",
+    "   "
+  ],
+  "key": {
+    "F": {
+      "item": "dofuscraft:yellow_piwi_feather"
+    }
+  },
+  "result": {
+    "item": "dofuscraft:yellow_piwi_belt"
+  }
+}
