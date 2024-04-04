@@ -1,0 +1,53 @@
+{
+  "characteristic.wisdom": "Wisdom",
+  "characteristic.fire_damage": "Fire Damage",
+
+  "item.dofuscraft.red_piwi_hat": "Red Piwi Hat",
+  "item.dofuscraft.blue_piwi_hat": "Blue Piwi Hat",
+  "item.dofuscraft.green_piwi_hat": "Green Piwi Hat",
+  "item.dofuscraft.yellow_piwi_hat": "Yellow Piwi Hat",
+  "item.dofuscraft.pink_piwi_hat": "Pink Piwi Hat",
+  "item.dofuscraft.purple_piwi_hat": "Purple Piwi Hat",
+  
+  "item.dofuscraft.red_piwi_cape": "Red Piwi Cape",
+  "item.dofuscraft.blue_piwi_cape": "Blue Piwi Cape",
+  "item.dofuscraft.green_piwi_cape": "Green Piwi Cape",
+  "item.dofuscraft.yellow_piwi_cape": "Yellow Piwi Cape",
+  "item.dofuscraft.pink_piwi_cape": "Pink Piwi Cape",
+  "item.dofuscraft.purple_piwi_cape": "Purple Piwi Cape",
+
+  "item.dofuscraft.red_piwi_amulet": "Red Piwi Amulet",
+  "item.dofuscraft.blue_piwi_amulet": "Blue Piwi Amulet",
+  "item.dofuscraft.green_piwi_amulet": "Green Piwi Amulet",
+  "item.dofuscraft.yellow_piwi_amulet": "Yellow Piwi Amulet",
+  "item.dofuscraft.pink_piwi_amulet": "Pink Piwi Amulet",
+  "item.dofuscraft.purple_piwi_amulet": "Purple Piwi Amulet",
+
+  "item.dofuscraft.red_piwi_ring": "Red Piwi Ring",
+  "item.dofuscraft.blue_piwi_ring": "Blue Piwi Ring",
+  "item.dofuscraft.green_piwi_ring": "Green Piwi Ring",
+  "item.dofuscraft.yellow_piwi_ring": "Yellow Piwi Ring",
+  "item.dofuscraft.pink_piwi_ring": "Pink Piwi Ring",
+  "item.dofuscraft.purple_piwi_ring": "Purple Piwi Ring",
+
+  "item.dofuscraft.red_piwi_belt": "Red Piwi Belt",
+  "item.dofuscraft.blue_piwi_belt": "Blue Piwi Belt",
+  "item.dofuscraft.green_piwi_belt": "Green Piwi Belt",
+  "item.dofuscraft.yellow_piwi_belt": "Yellow Piwi Belt",
+  "item.dofuscraft.pink_piwi_belt": "Pink Piwi Belt",
+  "item.dofuscraft.purple_piwi_belt": "Purple Piwi Belt",
+
+  "item.dofuscraft.red_piwi_sandals": "Red Piwi Sandals",
+  "item.dofuscraft.blue_piwi_sandals": "Blue Piwi Sandals",
+  "item.dofuscraft.green_piwi_sandals": "Green Piwi Sandals",
+  "item.dofuscraft.yellow_piwi_sandals": "Yellow Piwi Sandals",
+  "item.dofuscraft.pink_piwi_sandals": "Pink Piwi Sandals",
+  "item.dofuscraft.purple_piwi_sandals": "Purple Piwi Sandals",
+
+  "item.dofuscraft.red_piwi_feather": "Red Piwi Feather",
+  "item.dofuscraft.blue_piwi_feather": "Blue Piwi Feather",
+  "item.dofuscraft.green_piwi_feather": "Green Piwi Feather",
+  "item.dofuscraft.yellow_piwi_feather": "Yellow Piwi Feather",
+  "item.dofuscraft.pink_piwi_feather": "Pink Piwi Feather",
+  "item.dofuscraft.purple_piwi_feather": "Purple Piwi Feather"
+}

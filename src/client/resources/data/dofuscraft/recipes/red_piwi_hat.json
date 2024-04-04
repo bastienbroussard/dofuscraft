@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "   ",
+    "FFF",
+    "F F"
+  ],
+  "key": {
+    "F": {
+      "item": "dofuscraft:red_piwi_feather"
+    }
+  },
+  "result": {
+    "item": "dofuscraft:red_piwi_hat"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "required": true,
+  "package": "com.dofuscraft.mixin.client",
+  "compatibilityLevel": "JAVA_17",
+  "client": [
+    "PlayerScreenHandlerMixin",
+    "InventoryScreenMixin",
+    "PlayerInventoryMixin",
+    "PlayerEntityRendererMixin",
+    "HeadFeatureRendererMixin",
+    "ScreenHandlerMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
