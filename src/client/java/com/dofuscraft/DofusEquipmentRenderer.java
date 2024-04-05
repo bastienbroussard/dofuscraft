@@ -3,16 +3,13 @@ package com.dofuscraft;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.client.MinecraftClient;
-import net.minecraft.client.network.AbstractClientPlayerEntity;
 import net.minecraft.client.render.OverlayTexture;
-import net.minecraft.client.render.RenderLayer;
 import net.minecraft.client.render.VertexConsumer;
 import net.minecraft.client.render.VertexConsumerProvider;
 import net.minecraft.client.render.entity.EntityRenderer;
 import net.minecraft.client.render.entity.LivingEntityRenderer;
 import net.minecraft.client.render.entity.model.BipedEntityModel;
 import net.minecraft.client.render.entity.model.EntityModel;
-import net.minecraft.client.render.entity.model.PlayerEntityModel;
 import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
@@ -70,10 +67,10 @@ public class DofusEquipmentRenderer {
         }
         else if (type == DofusEquipmentType.CLOAK) {
             followBodyRotations(entity, this.model);
+            matrices.translate(0.0f, 0.0f, 0.17f);
+            matrices.scale(1.1f, 1.1f, 1.1f);
 
             if (entity instanceof PlayerEntity playerEntity) {
-                matrices.translate(0.0f, 0.0f, 0.17f);
-                matrices.scale(1.1f, 1.1f, 1.1f);
                 double d = MathHelper.lerp(tickDelta, playerEntity.prevCapeX, playerEntity.capeX) - MathHelper.lerp(tickDelta, playerEntity.prevX, playerEntity.getX());
                 double e = MathHelper.lerp(tickDelta, playerEntity.prevCapeY, playerEntity.capeY) - MathHelper.lerp(tickDelta, playerEntity.prevY, playerEntity.getY());
                 double m = MathHelper.lerp(tickDelta, playerEntity.prevCapeZ, playerEntity.capeZ) - MathHelper.lerp(tickDelta, playerEntity.prevZ, playerEntity.getZ());

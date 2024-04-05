@@ -3,7 +3,7 @@
 	"package": "com.dofuscraft.mixin",
 	"compatibilityLevel": "JAVA_17",
 	"mixins": [
-		"ExampleMixin"
+		"ArmorStandEntityMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1

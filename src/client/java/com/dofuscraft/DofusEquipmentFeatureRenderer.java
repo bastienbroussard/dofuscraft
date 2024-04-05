@@ -2,27 +2,25 @@ package com.dofuscraft;
 
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
-import net.minecraft.client.network.AbstractClientPlayerEntity;
 import net.minecraft.client.render.VertexConsumerProvider;
 import net.minecraft.client.render.entity.feature.FeatureRenderer;
 import net.minecraft.client.render.entity.feature.FeatureRendererContext;
-import net.minecraft.client.render.entity.model.EntityModel;
-import net.minecraft.client.render.entity.model.PlayerEntityModel;
+import net.minecraft.client.render.entity.model.BipedEntityModel;
 import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.entity.LivingEntity;
 
 @Environment(EnvType.CLIENT)
-public class DofusEquipmentFeatureRenderer extends FeatureRenderer<AbstractClientPlayerEntity, PlayerEntityModel<AbstractClientPlayerEntity>> {
+public class DofusEquipmentFeatureRenderer<T extends LivingEntity, M extends BipedEntityModel<T>>
+        extends FeatureRenderer<T, M> {
     private final boolean isSlim;
 
-    public DofusEquipmentFeatureRenderer(
-            FeatureRendererContext<AbstractClientPlayerEntity, PlayerEntityModel<AbstractClientPlayerEntity>> context, boolean isSlim) {
+    public DofusEquipmentFeatureRenderer(FeatureRendererContext<T, M> context, boolean isSlim) {
         super(context);
         this.isSlim = isSlim;
     }
 
     @Override
-    public void render(MatrixStack matrices, VertexConsumerProvider vertexConsumers, int light, AbstractClientPlayerEntity entity,
+    public void render(MatrixStack matrices, VertexConsumerProvider vertexConsumers, int light, T entity,
                        float limbAngle, float limbDistance, float tickDelta, float animationProgress, float headYaw, float headPitch) {
         int i = 0;
         var armorItemStacks = entity.getArmorItems();
