@@ -1,6 +1,6 @@
 package com.dofuscraft.mixin.client;
 
-import com.dofuscraft.DofusEquipmentFeatureRenderer;
+import com.dofuscraft.render.entity.feature.DofusEquipmentFeatureRenderer;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.client.render.entity.ArmorStandEntityRenderer;

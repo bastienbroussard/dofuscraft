@@ -1,10 +1,10 @@
 package com.dofuscraft;
 
-import com.dofuscraft.models.equipment.*;
+import com.dofuscraft.render.entity.DofusEquipmentRenderer;
+import com.dofuscraft.render.entity.model.equipment.*;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.item.Item;
-import oshi.util.tuples.Pair;
 
 import java.util.*;
 
