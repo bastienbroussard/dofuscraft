@@ -1,5 +1,6 @@
 package com.dofuscraft;
 
+import com.dofuscraft.registry.DofusSoundEventRegistry;
 import net.fabricmc.api.ModInitializer;
 import net.minecraft.entity.attribute.EntityAttribute;
 import org.slf4j.Logger;
@@ -16,6 +17,7 @@ public class DofusCraft implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
+		DofusSoundEventRegistry.registerAll();
 		// register characteristic attributes
 		/*for (var characteristic : Characteristic.values()) {
 			var attribute = new ClampedEntityAttribute(characteristic.getTranslationKey(), 0, 0, Integer.MAX_VALUE);

@@ -22,6 +22,6 @@ public abstract class PlayerEntityRendererMixin extends LivingEntityRenderer<Abs
 
     @Inject(at = @At("RETURN"), method = "<init>")
     public void PlayerEntityRenderer(EntityRendererFactory.Context ctx, boolean slim, CallbackInfo callback) {
-        this.addFeature(new DofusEquipmentFeatureRenderer(this, slim));
+        this.addFeature(new DofusEquipmentFeatureRenderer<>(this, slim));
     }
 }

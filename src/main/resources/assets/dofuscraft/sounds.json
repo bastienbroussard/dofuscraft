@@ -1,0 +1,22 @@
+{
+  "piwi_attack": {
+    "sounds": [
+      "dofuscraft:piwi/attack",
+      "dofuscraft:piwi/attack_2",
+      "dofuscraft:piwi/attack_3"
+    ]
+  },
+  "piwi_hurt": {
+    "sounds": [
+      "dofuscraft:piwi/hurt",
+      "dofuscraft:piwi/hurt_2",
+      "dofuscraft:piwi/hurt_3"
+    ]
+  },
+  "piwi_death": {
+    "sounds": [
+      "dofuscraft:piwi/death",
+      "dofuscraft:piwi/death_2"
+    ]
+  }
+}

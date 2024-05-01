@@ -1,14 +1,13 @@
 package com.dofuscraft.render.entity;
 
-import com.dofuscraft.DofusCraft;
 import com.dofuscraft.entity.PiwiEntity;
-import me.x150.renderer.render.Renderer3d;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.client.render.VertexConsumer;
 import net.minecraft.client.render.VertexConsumerProvider;
 import net.minecraft.client.render.entity.EntityRendererFactory;
 import net.minecraft.client.util.math.MatrixStack;
-import net.minecraft.util.math.RotationAxis;
 import net.minecraft.util.math.Vec3d;
 import software.bernie.geckolib.cache.object.BakedGeoModel;
 import software.bernie.geckolib.model.GeoModel;
@@ -16,8 +15,7 @@ import software.bernie.geckolib.renderer.GeoEntityRenderer;
 import software.bernie.geckolib.renderer.GeoRenderer;
 import software.bernie.geckolib.renderer.layer.GeoRenderLayer;
 
-import java.awt.*;
-
+@Environment(EnvType.CLIENT)
 public class PiwiEntityRenderer extends GeoEntityRenderer<PiwiEntity> {
     public PiwiEntityRenderer(EntityRendererFactory.Context renderManager, GeoModel<PiwiEntity> model) {
         super(renderManager, model);
@@ -41,11 +39,6 @@ public class PiwiEntityRenderer extends GeoEntityRenderer<PiwiEntity> {
             var range = 4;
             var target1 = new Vec3d(Math.cos(angle - delta), 0, Math.sin(angle - delta)).multiply(range);
             var target2 = new Vec3d(Math.cos(angle + delta), 0, Math.sin(angle + delta)).multiply(range);
-
-            Renderer3d.renderThroughWalls();
-            Renderer3d.renderLine(poseStack, Color.RED, pos, pos.add(target1));
-            Renderer3d.renderLine(poseStack, Color.RED, pos, pos.add(target2));
-            Renderer3d.stopRenderThroughWalls();
         }
     }
 }

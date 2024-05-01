@@ -1,5 +1,6 @@
 package com.dofuscraft;
 
+import com.dofuscraft.registry.DofusItemRegistry;
 import com.dofuscraft.render.entity.DofusEquipmentRenderer;
 import com.dofuscraft.render.entity.model.equipment.*;
 import net.fabricmc.api.EnvType;
