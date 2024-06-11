@@ -7,14 +7,19 @@ import net.minecraft.sound.SoundEvent;
 import net.minecraft.util.Identifier;
 
 public class DofusSoundEventRegistry {
+    // mobs
     public static SoundEvent PIWI_ATTACK;
     public static SoundEvent PIWI_HURT;
     public static SoundEvent PIWI_DEATH;
+
+    // spells
+    public static SoundEvent HAND;
 
     public static void registerAll() {
         PIWI_ATTACK = register("piwi_attack");
         PIWI_HURT = register("piwi_hurt");
         PIWI_DEATH = register("piwi_death");
+        HAND = register("hand");
     }
 
     private static SoundEvent register(String name) {

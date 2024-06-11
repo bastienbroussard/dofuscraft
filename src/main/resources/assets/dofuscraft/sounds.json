@@ -18,5 +18,10 @@
       "dofuscraft:piwi/death",
       "dofuscraft:piwi/death_2"
     ]
+  },
+  "hand": {
+    "sounds": [
+      "dofuscraft:spell/xelor/hand"
+    ]
   }
 }

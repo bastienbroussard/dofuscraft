@@ -2,7 +2,12 @@ package com.dofuscraft;
 
 import com.dofuscraft.registry.DofusSoundEventRegistry;
 import net.fabricmc.api.ModInitializer;
+import net.fabricmc.fabric.api.particle.v1.FabricParticleTypes;
 import net.minecraft.entity.attribute.EntityAttribute;
+import net.minecraft.particle.DefaultParticleType;
+import net.minecraft.registry.Registries;
+import net.minecraft.registry.Registry;
+import net.minecraft.util.Identifier;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -15,6 +20,8 @@ public class DofusCraft implements ModInitializer {
 
 	public static final Map<Characteristic, EntityAttribute> ATTRIBUTES = new HashMap<>();
 
+	public static final DefaultParticleType HAND = FabricParticleTypes.simple();
+
 	@Override
 	public void onInitialize() {
 		DofusSoundEventRegistry.registerAll();
@@ -24,5 +31,8 @@ public class DofusCraft implements ModInitializer {
 			ATTRIBUTES.put(characteristic, attribute);
 			Registry.register(Registries.ATTRIBUTE, characteristic.getName(), attribute);
 		}*/
+
+		// particles
+		Registry.register(Registries.PARTICLE_TYPE, new Identifier(MOD_ID, "hand"), HAND);
 	}
 }

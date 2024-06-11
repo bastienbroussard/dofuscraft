@@ -4,8 +4,10 @@ import com.mojang.blaze3d.systems.RenderSystem;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
+import net.fabricmc.fabric.api.client.particle.v1.ParticleFactoryRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.WorldRenderEvents;
 import net.minecraft.client.MinecraftClient;
+import net.minecraft.client.particle.EndRodParticle;
 import net.minecraft.client.render.*;
 import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.util.math.RotationAxis;
@@ -20,6 +22,8 @@ public class DofusCraftClient implements ClientModInitializer {
 		DofusEquipmentRendererRegistry.registerAll();
 		DofusEntityRendererRegistry.registerAll();
 		GeckoLibNetwork.registerClientReceiverPackets();
+
+		ParticleFactoryRegistry.getInstance().register(DofusCraft.HAND, EndRodParticle.Factory::new);
 
 		WorldRenderEvents.END.register(context -> {
 			var player = MinecraftClient.getInstance().player;
