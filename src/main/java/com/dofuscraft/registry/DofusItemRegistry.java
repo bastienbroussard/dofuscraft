@@ -221,6 +221,9 @@ public class DofusItemRegistry {
     public static final Item BLUE_PIWI_FEATHER = register("blue_piwi_feather", new Item(new FabricItemSettings()));
     public static final Item GREEN_PIWI_FEATHER = register("green_piwi_feather", new Item(new FabricItemSettings()));
 
+    // spells
+    public static final Item SPELLITEM_HAND = register("hand", new SpellItem());
+
     private static DofusEquipmentItem register(String name, DofusEquipmentItem item) {
         return Registry.register(
                 Registries.ITEM,
