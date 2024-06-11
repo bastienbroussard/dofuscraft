@@ -29,6 +29,11 @@
 			"environment": "client"
 		}
 	],
+	"custom": {
+		"loom:injected_interfaces": {
+			"net/minecraft/class_742": ["com/dofuscraft/SpellTelegraphAccessor"]
+		}
+	},
 	"depends": {
 		"fabricloader": ">=0.15.0",
 		"minecraft": "~1.20.4",

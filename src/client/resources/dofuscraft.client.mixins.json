@@ -9,7 +9,9 @@
     "PlayerEntityRendererMixin",
     "HeadFeatureRendererMixin",
     "ScreenHandlerMixin",
-    "ArmorStandEntityRendererMixin"
+    "ArmorStandEntityRendererMixin",
+    "HeldItemRendererMixin",
+    "AbstractClientPlayerEntityMixin"
   ],
   "injectors": {
     "defaultRequire": 1
