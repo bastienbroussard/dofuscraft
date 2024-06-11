@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "dofuscraft:item/yellow_piwi_belt"
+    "layer0": "dofuscraft:item/equipment/yellow_piwi_belt"
   }
 }

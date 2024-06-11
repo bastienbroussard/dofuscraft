@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "dofuscraft:item/red_piwi_hat"
+    "layer0": "dofuscraft:item/equipment/red_piwi_hat"
   }
 }

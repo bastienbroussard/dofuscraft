@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "dofuscraft:item/blue_piwi_sandals"
+    "layer0": "dofuscraft:item/equipment/blue_piwi_sandals"
   }
 }

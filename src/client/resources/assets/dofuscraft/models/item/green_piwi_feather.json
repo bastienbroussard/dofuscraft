@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "dofuscraft:item/green_piwi_feather"
+    "layer0": "dofuscraft:item/drop/green_piwi_feather"
   }
 }
